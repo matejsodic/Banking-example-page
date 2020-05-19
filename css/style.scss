@@ -357,6 +357,11 @@
 }
 
   .nav-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
       display: flex;
       justify-content: space-between;
       flex-direction: column;
@@ -364,7 +369,7 @@
       flex-shrink: 0;
       padding: 30px 30px;
       //width: 100px;
-      height: calc(100vh - 60px);
+      //height: calc(100vh - 60px);
       background-color: #251F72;
   }
 
@@ -383,11 +388,19 @@
   }
 
   .main-wrapper {
+      position: fixed;
+      top: 0;
+      bottom: 0px;
+      left: 0;
       background-color: #F5F6FA;
       display: flex;
       flex-direction: column;
-      width: 100%;
+      width: calc(100% - 200px);
       padding: 40px 40px 20px 40px;
+      //position: relative;
+      min-width: 1300px;
+      margin-left: 120px;
+      //display: block;
   }
   
   .heading-wrapper {
@@ -457,4 +470,343 @@
   .back {
        margin-right: 50px;
        color: #ACACAF;
+  }
+
+  .all-cards-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .card {
+    background-color: white;
+    padding: 20px 20px;
+    width: 285px;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+
+  .owner-name {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-number-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .card-balance {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .balance {
+    font-size: 32px;
+    
+  }
+
+  .card-number {
+    color: #A2A9B8;
+  }
+
+  .currency, .balance {
+    color: #666666;
+  }
+
+  .owner, .date {
+    color: #A3AAB9;
+  }
+  
+  .dots-wrapper-two {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .money-overview-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+  }
+
+  .my-transaction-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-right: 20px;
+  }
+  
+  .see-all-transactions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .transaction-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  .desc {
+    margin: 0;
+  }
+
+  .trans-img-style {
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+  }
+
+  .transactions {
+    padding: 20px 20px;
+    background-color: white;
+    border-radius: 10px;
+    min-width: 500px;
+  }
+
+  .desc-wrapp-img {
+    display: flex;
+    align-items: center;
+  }
+
+  .desc-wrapper {
+    margin-left: 10px;
+  }
+
+  .last {
+    margin-bottom: 0;
+  }
+
+  .desc-date {
+    color: #8B93A6;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .money-status {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    padding-right: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+
+  .money-status-red {
+    color: #E62A1D;
+    background-color: #FFEEEE;
+  }
+
+  .money-status-green {
+    color: #10A466;
+    background-color: #DCFBEE;
+  }
+
+  .money-status-orange {
+    color: #DF6E2E;
+    background-color: #FEEDE1;
+  }
+
+  .money-img {
+    margin-right: 5px;
+  }
+
+  .senttt {
+    display: flex;
+    justify-content: flex-start;
+    width: 70px;
+  }
+
+  .actions-wrapper {
+    margin-right: 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .persons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .limits-wrapper-two {
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20px;
+    background-color: white;
+  }
+
+  .persons-img {
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  .choose-person {
+    position: relative;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+  }
+
+  .send-money-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 40%
+  }
+
+  .meter { 
+    height: 7px;
+    position: relative;
+    background: #EBECF0;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    padding: 0px;
+    margin-top: 10px;
+    box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+  }
+
+  .meter > span {
+    display: block;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #E62A1D;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .limits-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .meter-yellow > span {
+    background-color: #FFC501;
+  }
+
+  .month-overview {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+
+  .credit-limit-wrapper {
+    margin-right: 30px;
+  }
+
+  .last{
+    margin-right: 0;
+  }
+
+  .credit-limit-heading {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .goal-wrapper {
+    margin-top: 40px;
+  }
+
+  .goal, .credit-card-last-four-digits {
+    color: #A2A8B5;
+  }
+
+  .goal-money {
+    color: black;
+  }
+
+  .promo-img {
+    border-radius: 10px;
+    margin-right: 20px;
+    height: 100%;
+  }
+  
+  .send-money-button {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 0px;
+    background-color: #E62A1D;
+    color: white;
+  }
+
+  .input-box {
+    border: none;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding: 5px;
+    padding-left: 0;
+    border-bottom: 1px solid #ECEDF0;
+  }
+
+  .currency-number {
+    position: absolute;
+    bottom: 63px;
+    right: 20px;
+  }
+
+  .form {
+    margin: 0;
+  }
+
+  .promo-img-link {
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 100%;
+  }
+
+  .limits-wrapper-three {
+    display: flex;
+    justify-content: space-between;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    margin-top: 2px;
+    height: 100%;
+  }
+
+  .income-wrapper {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  }
+
+  .income {
+    font-weight: bold;
+  }
+
+  .income-money {
+    font-weight: bold;
+  }
+
+  .income-red {
+    color: #E62A1D;
+  }
+
+  .income-green {
+    color: #10A466;
+  }
+
+  .income-blue {
+    color: #342DDA;
   }
