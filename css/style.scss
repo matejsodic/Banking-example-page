@@ -443,6 +443,9 @@
       padding: 10px 15px;
       border-radius: 10px;
       font-size: 24px;
+      box-shadow: 0 2.1px 6.5px #C0392B, 0 30px 50px rgba(18, 0, 0, 0.1)
+;
+
   }
 
   .all-cards {
@@ -591,7 +594,7 @@
   }
 
   .money-status {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     padding: 5px;
     padding-right: 10px;
@@ -616,6 +619,7 @@
 
   .money-img {
     margin-right: 5px;
+    vertical-align: middle;
   }
 
   .senttt {
@@ -785,7 +789,6 @@
 
   .income-wrapper {
     display: flex;
-    height: 100%;
     flex-direction: column;
     justify-content: space-between;
     
@@ -809,4 +812,47 @@
 
   .income-blue {
     color: #342DDA;
+  }
+
+  .feather-grid:hover, .feather-credit-card:hover, .feather-user:hover, .feather-shield:hover, .feather-pie-chart:hover, .feather-arrow-right-circle:hover {
+    stroke: white;
+  }
+
+  .feather-command:hover {
+    stroke: rgb(194, 29, 17);
+  }
+
+  .card:hover{
+    background-image: linear-gradient(to bottom right, rgb(197, 5, 5), rgb(224, 147, 2), rgb(61, 0, 160));
+  }
+
+  .card:hover > *{
+    color: white;
+  }
+
+  .link-style-block {
+    display: block;
+    width: 24px;
+  }
+
+  .send-money-button:hover {
+    cursor: pointer;
+  }
+
+  .table {
+    border: none;
+    width: 100%;
+    table-layout: auto;
+  }
+
+  th, td {
+    padding: 9px;
+  }
+
+  .table td {
+    vertical-align: center;
+  }
+
+  .td-money {
+    text-align: right;
   }
